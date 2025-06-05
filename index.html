@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu eBook Resetei - Aprenda Gemologia Básica + 2 Bônus Grátis</title>
+    <style>
+        :root {
+            --azul-turquesa: #40E0D0;
+            --dourado-fosco: #D4AF37;
+            --azul-escuro: #0A2E38;
+            --vermelho-urgente: #FF4757;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Estilos de Texto */
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        /* Botões e CTA */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(to right, var(--dourado-fosco), #c9a227);
+            color: white;
+            border: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            animation: pulse 2s infinite;
+            border-radius: 50px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Header de Urgência */
+        .header-bar {
+            background-color: var(--azul-escuro);
+            color: white;
+            padding: 12px 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        /* Seção Hero */
+        .hero-section {
+            background: linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul-turquesa) 100%);
+            color: white;
+            padding: 80px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* Cards de Benefícios */
+        .benefit-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid #eee;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Seção de Bônus */
+        .bonus-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .bonus-card {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            background: white;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eee;
+        }
+
+        .bonus-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .bonus-gratis {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--vermelho-urgente);
+            color: white;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            z-index: 2;
+            text-transform: uppercase;
+        }
+
+        /* Seção de Oferta */
+        .offer-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul-turquesa) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .price-box {
+            background: white;
+            border-radius: 10px;
+            padding: 40px 20px;
+            margin: 0 auto 30px;
+            max-width: 600px;
+            position: relative;
+            overflow: hidden;
+            color: var(--azul-escuro);
+        }
+
+        .price-box::before {
+            content: "OFERTA LIMITADA";
+            position: absolute;
+            top: 15px;
+            right: -35px;
+            background: var(--dourado-fosco);
+            color: var(--azul-escuro);
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* Depoimentos */
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid #eee;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: " ";
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 60px;
+            color: var(--azul-turquesa);
+            opacity: 0.1;
+            font-family: serif;
+        }
+
+        /* Garantia */
+        .guarantee-section {
+            padding: 80px 0;
+            text-align: center;
+            background: #f9f9f9;
+        }
+
+        .guarantee-badge {
+            background: var(--azul-turquesa);
+            color: var(--azul-escuro);
+            font-weight: bold;
+            border-radius: 50px;
+            display: inline-block;
+            padding: 8px 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--azul-escuro);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .hero-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .price-box::before {
+                font-size: 10px;
+                right: -30px;
+                padding: 3px 30px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Barra de Urgência -->
+    <div class="header-bar">
+        ⏰ BÔNUS GRÁTIS POR TEMPO LIMITADO! OFERTA TERMINA EM: <span id="countdown"
+            style="color: var(--dourado-fosco);">05:00:00</span>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>PARE DE CHUTAR!</h1>
+            <h2
+                style="font-size: 1.8rem; margin-bottom: 25px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Domine os <span style="color: var(--dourado-fosco);">fundamentos da gemologia</span> sem complicação
+            </h2>
+            <p style="font-size: 1.2rem; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                Aprenda a identificar pedras preciosas e avaliar seu valor real com métodos simples que qualquer pessoa
+                pode usar
+            </p>
+
+            <!-- Container do Vídeo e eBook -->
+            <div
+                style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; align-items: center; margin-bottom: 40px;">
+                <!-- Vídeo -->
+                <!-- Substitua o placeholder do vídeo por este código -->
+                <div
+                    style="flex: 1; min-width: 300px; max-width: 600px; border: 5px solid rgba(255,255,255,0.3); border-radius: 10px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.2); background: rgba(0,0,0,0.3); margin-bottom: 30px;">
+
+                    <!-- ESCOLHA UMA DAS OPÇÕES ABAIXO -->
+
+                    <!-- 1. SE USAR YOUTUBE (recomendado) -->
+                    <iframe width="100%" height="350" src="./video/video-pedras-preciosas-pagina.mp4" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen style="display: block;"></iframe>
+
+                    <!-- 2. SE USAR VÍDEO DIRETO (hospedado por você) -->
+                    <!-- <video controls width="100%" poster="img/capa-video.jpg" style="display: block;">
+        <source src="video/seu-video.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos HTML5.
+    </video> -->
+                </div>
+                <!-- eBook 3D -->
+                <div style="flex: 1; min-width: 250px; max-width: 300px; perspective: 1000px; margin-left: 30px;">
+                    <div style="background: linear-gradient(135deg, rgba(64,224,208,0.8), rgba(10,46,56,0.9)); padding: 25px; border-radius: 12px; transform: rotateY(-15deg) rotateX(5deg); box-shadow: 15px 15px 40px rgba(0,0,0,0.4); transition: all 0.5s ease;"
+                        id="ebook3d">
+                        <div
+                            style="background: white; padding: 20px; border-radius: 8px; box-shadow: inset 0 0 15px rgba(0,0,0,0.1); transform-style: preserve-3d;">
+                            <img src="./img/meuEbookResetei (2).png" alt="Capa 3D do eBook"
+                                style="width: 100%; border: 3px solid var(--dourado-fosco); filter: drop-shadow(5px 5px 10px rgba(0,0,0,0.2)); transition: all 0.3s ease;">
+                            <div
+                                style="height: 15px; background: #f1f1f1; margin: 20px -20px -20px; border-radius: 0 0 8px 8px; box-shadow: inset 0 5px 5px -5px rgba(0,0,0,0.2);">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    // Efeito de movimento 3D com mouse
+                    document.getElementById('ebook3d').addEventListener('mousemove', (e) => {
+                        const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+                        const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+                        e.currentTarget.style.transform = `rotateY(${-15 + xAxis}deg) rotateX(${5 - yAxis}deg)`;
+                    });
+
+                    // Reset quando o mouse sai
+                    document.getElementById('ebook3d').addEventListener('mouseleave', (e) => {
+                        e.currentTarget.style.transform = 'rotateY(-15deg) rotateX(5deg)';
+                    });
+                </script>
+            </div>
+
+            <!-- Botão CTA -->
+            <button class="cta-button" style="padding: 18px 45px; font-size: 1.2rem; margin-bottom: 30px;">
+                QUERO APRENDER AGORA!
+            </button>
+
+            <!-- Selos de Segurança -->
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <div
+                    style="background: white; padding: 10px 15px; border-radius: 5px; display: flex; align-items: center;">
+                    <i class="fas fa-shield-alt" style="color: var(--dourado-fosco); margin-right: 8px;"></i>
+                    <span style="color: var(--azul-escuro); font-size: 0.8rem;">7 Dias de Garantia</span>
+                </div>
+                <div
+                    style="background: white; padding: 10px 15px; border-radius: 5px; display: flex; align-items: center;">
+                    <i class="fas fa-gift" style="color: var(--dourado-fosco); margin-right: 8px;"></i>
+                    <span style="color: var(--azul-escuro); font-size: 0.8rem;">Bônus Grátis</span>
+                </div>
+                <div
+                    style="background: white; padding: 10px 15px; border-radius: 5px; display: flex; align-items: center;">
+                    <i class="fas fa-lock" style="color: var(--dourado-fosco); margin-right: 8px;"></i>
+                    <span style="color: var(--azul-escuro); font-size: 0.8rem;">Compra Segura</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Para Quem É -->
+    <section style="padding: 80px 0; background-color: #f8f9fa;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 50px; color: var(--azul-escuro);">
+                PARA QUEM É ESSE <span style="color: var(--dourado-fosco);">eBOOK</span>?
+            </h2>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 50px;">
+                <!-- Público 1 -->
+                <div class="benefit-card">
+                    <div
+                        style="background: var(--azul-turquesa); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <i class="fas fa-gem" style="font-size: 30px; color: white;"></i>
+                    </div>
+                    <h3 style="font-size: 1.4rem; color: var(--azul-escuro); margin-bottom: 15px;">Colecionadores
+                        Iniciantes</h3>
+                    <p style="color: #666;">Que querem começar uma coleção sem medo de ser enganado por pedras falsas ou
+                        superfaturadas.</p>
+                </div>
+
+                <!-- Público 2 -->
+                <div class="benefit-card">
+                    <div
+                        style="background: var(--azul-turquesa); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <i class="fas fa-shopping-bag" style="font-size: 30px; color: white;"></i>
+                    </div>
+                    <h3 style="font-size: 1.4rem; color: var(--azul-escuro); margin-bottom: 15px;">Compradores
+                        Ocasionais</h3>
+                    <p style="color: #666;">Que desejam presentear com joias e pedras preciosas, mas não sabem avaliar
+                        qualidade e preço justo.</p>
+                </div>
+
+                <!-- Público 3 -->
+                <div class="benefit-card">
+                    <div
+                        style="background: var(--azul-turquesa); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+                        <i class="fas fa-search" style="font-size: 30px; color: white;"></i>
+                    </div>
+                    <h3 style="font-size: 1.4rem; color: var(--azul-escuro); margin-bottom: 15px;">Curiosos por
+                        Gemologia</h3>
+                    <p style="color: #666;">Que querem entender os fundamentos da avaliação de pedras sem se tornar um
+                        especialista certificado.</p>
+                </div>
+            </div>
+
+            <div
+                style="text-align: center; background: white; padding: 30px; border-radius: 10px; max-width: 800px; margin: 0 auto; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #eee;">
+                <h3 style="font-size: 1.4rem; color: var(--azul-escuro); margin-bottom: 20px;">
+                    <span style="color: var(--dourado-fosco);">ATENÇÃO:</span> Este NÃO É um curso técnico de gemologia
+                </h3>
+                <p style="color: #666;">
+                    Este eBook foi criado para dar a você <strong>conhecimento básico e prático</strong> para não ser
+                    enganado ao comprar ou avaliar pedras preciosas. Não vamos nos aprofundar em técnicas profissionais
+                    que exigem equipamentos caros ou certificação.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: O Que Você Vai Aprender -->
+    <section style="padding: 80px 0; background-color: var(--azul-escuro); color: white;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 50px;">
+                O QUE VOCÊ VAI <span style="color: var(--dourado-fosco);">APRENDER</span>?
+            </h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <!-- Aprendizado 1 -->
+                <div
+                    style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px; border-left: 5px solid var(--azul-turquesa);">
+                    <h3
+                        style="font-size: 1.3rem; color: var(--dourado-fosco); margin-bottom: 15px; display: flex; align-items: center;">
+                        <i class="fas fa-check-circle" style="margin-right: 10px;"></i> Identificação Básica
+                    </h3>
+                    <p>Como distinguir pedras naturais de sintéticas e imitações usando métodos simples que qualquer
+                        pessoa pode aplicar em casa.</p>
+                </div>
+
+                <!-- Aprendizado 2 -->
+                <div
+                    style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px; border-left: 5px solid var(--azul-turquesa);">
+                    <h3
+                        style="font-size: 1.3rem; color: var(--dourado-fosco); margin-bottom: 15px; display: flex; align-items: center;">
+                        <i class="fas fa-check-circle" style="margin-right: 10px;"></i> Os 4 Fatores de Valor
+                    </h3>
+                    <p>Os pilares essenciais que determinam o preço de uma gema: cor, claridade, corte e peso em
+                        quilates.</p>
+                </div>
+
+                <!-- Aprendizado 3 -->
+                <div
+                    style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px; border-left: 5px solid var(--azul-turquesa);">
+                    <h3
+                        style="font-size: 1.3rem; color: var(--dourado-fosco); margin-bottom: 15px; display: flex; align-items: center;">
+                        <i class="fas fa-check-circle" style="margin-right: 10px;"></i> Testes Caseiros
+                    </h3>
+                    <p>Técnicas simples para testar autenticidade sem equipamentos profissionais (usando luz, água, lupa
+                        e outros itens domésticos).</p>
+                </div>
+
+                <!-- Aprendizado 4 -->
+                <div
+                    style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px; border-left: 5px solid var(--azul-turquesa);">
+                    <h3
+                        style="font-size: 1.3rem; color: var(--dourado-fosco); margin-bottom: 15px; display: flex; align-items: center;">
+                        <i class="fas fa-check-circle" style="margin-right: 10px;"></i> Terminologia Essencial
+                    </h3>
+                    <p>O vocabulário básico da gemologia para você não se perder em conversas com vendedores e
+                        colecionadores.</p>
+                </div>
+
+                <!-- Aprendizado 5 -->
+                <div
+                    style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px; border-left: 5px solid var(--azul-turquesa);">
+                    <h3
+                        style="font-size: 1.3rem; color: var(--dourado-fosco); margin-bottom: 15px; display: flex; align-items: center;">
+                        <i class="fas fa-check-circle" style="margin-right: 10px;"></i> Avaliação de Mercado
+                    </h3>
+                    <p>Como pesquisar e comparar preços para não pagar mais do que uma pedra realmente vale no mercado
+                        atual.</p>
+                </div>
+
+                <!-- Aprendizado 6 -->
+                <div
+                    style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px; border-left: 5px solid var(--azul-turquesa);">
+                    <h3
+                        style="font-size: 1.3rem; color: var(--dourado-fosco); margin-bottom: 15px; display: flex; align-items: center;">
+                        <i class="fas fa-check-circle" style="margin-right: 10px;"></i> Cuidados Básicos
+                    </h3>
+                    <p>Como armazenar e limpar suas pedras preciosas para preservar seu valor e beleza ao longo do
+                        tempo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Bônus Exclusivos Grátis -->
+    <section class="bonus-section">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 20px; color: var(--azul-escuro);">
+                <span style="color: var(--dourado-fosco);">BÔNUS GRÁTIS</span> PARA QUEM COMPRAR HOJE!
+            </h2>
+            <p style="text-align: center; font-size: 1.1rem; max-width: 800px; margin: 0 auto 50px; color: #666;">
+                Para te ajudar a começar imediatamente sua jornada na gemologia, eu preparei esses dois presentes
+                especiais <strong>que você receberá GRÁTIS</strong> junto com seu eBook:
+            </p>
+
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; margin-bottom: 50px;">
+                <!-- Bônus 1 -->
+                <div class="bonus-card">
+                    <div
+                        style="position: relative; height: 200px; background: linear-gradient(45deg, #f5f7fa, #c3cfe2); display: flex; align-items: center; justify-content: center;">
+                        <div class="bonus-gratis">Grátis Hoje</div>
+                        <i class="fas fa-brain" style="font-size: 80px; color: var(--azul-escuro); opacity: 0.3;"></i>
+                    </div>
+                    <div style="padding: 25px;">
+                        <h3 style="font-size: 1.5rem; color: var(--azul-escuro); margin-bottom: 15px;">
+                            Mapa Mental das Propriedades das Pedras
+                        </h3>
+                        <p style="margin-bottom: 20px; color: #666;">
+                            <strong>PDF Exclusivo:</strong> Um resumo visual completo com todas as propriedades físicas
+                            e ópticas das principais pedras preciosas para consulta rápida.
+                        </p>
+                        <ul style="margin-bottom: 20px; padding-left: 20px; color: #666;">
+                            <li style="margin-bottom: 8px; position: relative; padding-left: 25px;">
+                                <i class="fas fa-check"
+                                    style="color: var(--azul-turquesa); position: absolute; left: 0;"></i> Dureza,
+                                densidade e clivagem
+                            </li>
+                            <li style="margin-bottom: 8px; position: relative; padding-left: 25px;">
+                                <i class="fas fa-check"
+                                    style="color: var(--azul-turquesa); position: absolute; left: 0;"></i> Índice de
+                                refração e birrefringência
+                            </li>
+                            <li style="margin-bottom: 8px; position: relative; padding-left: 25px;">
+                                <i class="fas fa-check"
+                                    style="color: var(--azul-turquesa); position: absolute; left: 0;"></i> Fluorescência
+                                e pleocroísmo
+                            </li>
+                            <li style="position: relative; padding-left: 25px;">
+                                <i class="fas fa-check"
+                                    style="color: var(--azul-turquesa); position: absolute; left: 0;"></i> Organizado
+                                por famílias de pedras
+                            </li>
+                        </ul>
+                        <p style="font-style: italic; color: #888; border-top: 1px dashed #ddd; padding-top: 15px;">
+                            <span style="text-decoration: line-through;">Valor: R$ 47,00</span> <strong
+                                style="color: var(--dourado-fosco); display: block; margin-top: 5px;">HOJE
+                                GRÁTIS</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bônus 2 -->
+                <div class="bonus-card">
+                    <div
+                        style="position: relative; height: 200px; background: linear-gradient(45deg, #f5f7fa, #c3cfe2); display: flex; align-items: center; justify-content: center;">
+                        <div class="bonus-gratis">Grátis Hoje</div>
+                        <i class="fas fa-table" style="font-size: 80px; color: var(--azul-escuro); opacity: 0.3;"></i>
+                    </div>
+                    <div style="padding: 25px;">
+                        <h3 style="font-size: 1.5rem; color: var(--azul-escuro); margin-bottom: 15px;">
+                            Tabela Atualizada de Pedras Preciosas - 2025
+                        </h3>
+                        <p style="margin-bottom: 20px; color: #666;">
+                            <strong>Planilha Editável:</strong> Valores de mercado atualizados das 50 pedras mais
+                            comercializadas, com variações por qualidade, tamanho e procedência.
+                        </p>
+                        <ul style="margin-bottom: 20px; padding-left: 20px; color: #666;">
+                            <li style="margin-bottom: 8px; position: relative; padding-left: 25px;">
+                                <i class="fas fa-check"
+                                    style="color: var(--azul-turquesa); position: absolute; left: 0;"></i> Preços por
+                                quilate e por peça
+                            </li>
+                            <li style="margin-bottom: 8px; position: relative; padding-left: 25px;">
+                                <i class="fas fa-check"
+                                    style="color: var(--azul-turquesa); position: absolute; left: 0;"></i> Variações de
+                                cor e pureza
+                            </li>
+                            <li style="margin-bottom: 8px; position: relative; padding-left: 25px;">
+                                <i class="fas fa-check"
+                                    style="color: var(--azul-turquesa); position: absolute; left: 0;"></i> Fontes
+                                confiáveis de referência
+                            </li>
+                            <li style="position: relative; padding-left: 25px;">
+                                <i class="fas fa-check"
+                                    style="color: var(--azul-turquesa); position: absolute; left: 0;"></i> Atualização
+                                anual gratuita
+                            </li>
+                        </ul>
+                        <p style="font-style: italic; color: #888; border-top: 1px dashed #ddd; padding-top: 15px;">
+                            <span style="text-decoration: line-through;">Valor: R$ 67,00</span> <strong
+                                style="color: var(--dourado-fosco); display: block; margin-top: 5px;">HOJE
+                                GRÁTIS</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                style="text-align: center; background: var(--azul-escuro); color: white; padding: 30px; border-radius: 10px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <h3 style="font-size: 1.4rem; margin-bottom: 20px; color: var(--dourado-fosco);">
+                    <i class="fas fa-exclamation-triangle" style="margin-right: 10px;"></i> ATENÇÃO: ESTES BÔNUS SÃO POR
+                    TEMPO LIMITADO!
+                </h3>
+                <p style="font-size: 1.1rem; margin-bottom: 0;">
+                    Esses presentes especiais estão disponíveis <strong>apenas para compras realizadas até
+                        hoje</strong>. Depois disso, o eBook voltará ao preço normal sem os bônus.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Depoimentos -->
+    <section style="padding: 80px 0; background-color: #f8f9fa;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 50px; color: var(--azul-escuro);">
+                O QUE ESTÃO FALANDO DO <span style="color: var(--dourado-fosco);">eBOOK</span>
+            </h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <!-- Depoimento 1 -->
+                <div class="testimonial-card">
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <div
+                            style="width: 70px; height: 70px; border-radius: 50%; background: #eee; display: flex; align-items: center; justify-content: center; margin-right: 15px; overflow: hidden;">
+                            <i class="fas fa-user" style="font-size: 30px; color: #999;"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin: 0; font-size: 1.1rem; color: var(--azul-escuro);">Carlos R.</h4>
+                            <p style="margin: 0; color: var(--dourado-fosco); font-weight: bold;">
+                                <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
+                                    class="fas fa-star"></i> <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <p style="color: #666;">"Comprei um anel de safira por R$ 1.200 e depois do eBook descobri que era
+                        vidro colorido! O método de teste com luz ultravioleta me salvou de perder dinheiro. Já valeu
+                        10x o preço!"</p>
+                </div>
+
+                <!-- Depoimento 2 -->
+                <div class="testimonial-card">
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <div
+                            style="width: 70px; height: 70px; border-radius: 50%; background: #eee; display: flex; align-items: center; justify-content: center; margin-right: 15px; overflow: hidden;">
+                            <i class="fas fa-user" style="font-size: 30px; color: #999;"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin: 0; font-size: 1.1rem; color: var(--azul-escuro);">Amanda S.</h4>
+                            <p style="margin: 0; color: var(--dourado-fosco); font-weight: bold;">
+                                <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
+                                    class="fas fa-star"></i> <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <p style="color: #666;">"Herdei algumas pedras da minha avó e não fazia ideia do valor. Com o guia
+                        de avaliação, descobri que uma delas é uma turmalina paraíba que vale quase R$ 3.000!"</p>
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div class="testimonial-card">
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <div
+                            style="width: 70px; height: 70px; border-radius: 50%; background: #eee; display: flex; align-items: center; justify-content: center; margin-right: 15px; overflow: hidden;">
+                            <i class="fas fa-user" style="font-size: 30px; color: #999;"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin: 0; font-size: 1.1rem; color: var(--azul-escuro);">Roberto F.</h4>
+                            <p style="margin: 0; color: var(--dourado-fosco); font-weight: bold;">
+                                <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
+                                    class="fas fa-star"></i> <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <p style="color: #666;">"Sempre fui enganado em feiras de pedras. Agora consigo identificar as
+                        falsificações mais comuns e negociar melhor. O capítulo sobre as imitações de diamante foi
+                        revelador!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Garantia -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div
+                style="background: white; padding: 40px; border-radius: 10px; max-width: 800px; margin: 0 auto; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                <div
+                    style="width: 150px; height: 150px; background: var(--azul-turquesa); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 30px;">
+                    <i class="fas fa-hand-holding-usd" style="font-size: 60px; color: white;"></i>
+                </div>
+                <h2 style="font-size: 2rem; margin-bottom: 20px; color: var(--azul-escuro);">
+                    <span style="color: var(--dourado-fosco);">GARANTIA</span> INCONDICIONAL
+                </h2>
+                <p style="font-size: 1.1rem; margin-bottom: 30px; color: #666;">
+                    Eu confio tanto no valor deste eBook que ofereço <strong>7 dias de garantia total</strong>. Se por
+                    qualquer motivo você não achar que o conteúdo vale muito mais do que o preço pago, basta mandar um
+                    email e devolvo 100% do seu dinheiro sem perguntas.
+                </p>
+                <div class="guarantee-badge">
+                    <i class="fas fa-lock" style="margin-right: 8px;"></i> VOCÊ NÃO TEM NADA A PERDER!
+                </div>
+                <p style="font-size: 1rem; font-style: italic; color: #888; margin-top: 30px;">
+                    Pense bem: ou você aprende a avaliar pedras preciosas e nunca mais é enganado, ou recebe seu
+                    dinheiro de volta. O risco é todo meu!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Oferta com Bônus -->
+    <section class="offer-section">
+        <div class="container">
+            <h2 style="font-size: 2.2rem; margin-bottom: 20px;">
+                OFERTA COM <span style="color: var(--dourado-fosco);">BÔNUS GRÁTIS</span>!
+            </h2>
+
+            <div class="price-box">
+                <div style="margin-bottom: 20px;">
+                    <p style="text-decoration: line-through; font-size: 1.3rem; margin-bottom: 5px; color: #888;">Preço
+                        Normal: R$ 97,00</p>
+                    <p style="font-size: 2.5rem; font-weight: bold; margin-bottom: 5px; color: var(--dourado-fosco);">R$
+                        47,00</p>
+                    <p style="font-size: 1.1rem; color: var(--azul-escuro);">ou 3x de R$ 15,67 no cartão</p>
+                </div>
+
+                <div
+                    style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; margin-bottom: 30px; text-align: left;">
+                    <h3 style="margin-top: 0; font-size: 1.2rem; color: var(--dourado-fosco); margin-bottom: 15px;">Você
+                        vai receber HOJE:</h3>
+                    <ul style="padding-left: 20px; font-size: 1rem; list-style-type: none;">
+                        <li style="margin-bottom: 12px; position: relative; padding-left: 30px;">
+                            <i class="fas fa-check-circle"
+                                style="color: var(--dourado-fosco); position: absolute; left: 0; top: 3px;"></i>
+                            <strong>eBook "Pare de Chutar!"</strong> - Avaliando Pedras Preciosas <span
+                                style="color: #ddd;">(R$97)</span>
+                        </li>
+                        <li style="margin-bottom: 12px; position: relative; padding-left: 30px;">
+                            <i class="fas fa-gift"
+                                style="color: var(--dourado-fosco); position: absolute; left: 0; top: 3px;"></i>
+                            <strong>Bônus #1:</strong> Mapa Mental das Propriedades <span
+                                style="color: var(--dourado-fosco); font-weight: bold;">GRÁTIS</span> <span
+                                style="color: #ddd;">(R$47)</span>
+                        </li>
+                        <li style="margin-bottom: 12px; position: relative; padding-left: 30px;">
+                            <i class="fas fa-gift"
+                                style="color: var(--dourado-fosco); position: absolute; left: 0; top: 3px;"></i>
+                            <strong>Bônus #2:</strong> Tabela de Pedras 2025 <span
+                                style="color: var(--dourado-fosco); font-weight: bold;">GRÁTIS</span> <span
+                                style="color: #ddd;">(R$67)</span>
+                        </li>
+                       <!-- <li style="position: relative; padding-left: 30px;">
+                            <i class="fas fa-check"
+                                style="color: var(--dourado-fosco); position: absolute; left: 0; top: 3px;"></i>
+                            <strong>Bônus Extra:</strong> Checklist "5 Sinais de Pedra Falsa"
+                        </li>-->
+                    </ul>
+                    <p
+                        style="font-weight: bold; font-size: 1.1rem; margin-bottom: 0; text-align: center; margin-top: 15px; background: rgba(0,0,0,0.1); padding: 10px; border-radius: 5px;">
+                        Total em bônus: <span style="color: var(--dourado-fosco);">R$ 114,00 GRÁTIS</span>
+                    </p>
+                </div>
+
+                <div
+                    style="background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; margin-bottom: 30px;">
+                    <p style="margin: 0 0 10px; font-weight: bold; font-size: 1.1rem;">BÔNUS DISPONÍVEIS POR:</p>
+                    <div id="countdown-offer"
+                        style="font-size: 2rem; font-weight: bold; display: flex; justify-content: center; gap: 15px;">
+                        <span>05</span>:<span>00</span>:<span>00</span>
+                    </div>
+                </div>
+
+                <button class="cta-button"
+                    style="padding: 20px 50px; font-size: 1.3rem; margin-bottom: 30px; width: 100%; max-width: 400px;">
+                    QUERO MEU EBOOK E BÔNUS AGORA!
+                </button>
+
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div class="guarantee-badge" style="font-size: 1.1rem; margin-bottom: 20px;">
+                        <i class="fas fa-shield-alt" style="margin-right: 8px;"></i> GARANTIA DE 7 DIAS | RISCO ZERO
+                    </div>
+                    <!--<a href="#"
+                        style="background: #25D366; color: white; display: inline-flex; align-items: center; padding: 12px 25px; border-radius: 50px; font-weight: bold; margin-top: 15px; text-decoration: none; transition: all 0.3s ease;">
+                        <i class="fab fa-whatsapp" style="font-size: 1.5rem; margin-right: 10px;"></i> Dúvidas? Fale
+                        comigo
+                    </a>-->
+                </div>
+
+                <div style="margin-top: 30px;">
+                    <img src="./img/formadepagamebntos.png"
+                        alt="Cartões de crédito e outras formas de pagamento"
+                        style="max-width: 250px; width: 100%; margin: 0 auto; display: block;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p style="margin-bottom: 20px; font-size: 0.9rem;">
+                © 2025 Meu eBook Pare de Chutar. Todos os direitos reservados.
+            </p>
+            <p style="margin-bottom: 20px; font-size: 0.8rem; color: rgba(255,255,255,0.7);">
+                Este produto não substitui uma avaliação profissional certificada. Para laudos oficiais, consulte um
+                gemólogo qualificado.
+            </p>
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-bottom: 30px;">
+                <a href="./pageTermos-Uso/" style="color: white; font-size: 0.8rem; text-decoration: none;">Termos de Uso</a>
+                <a href="./pagePoliticas-Privacidade/index.html" style="color: white; font-size: 0.8rem; text-decoration: none;">Política de Privacidade</a>
+                <a href="./pageContato/index.html" style="color: white; font-size: 0.8rem; text-decoration: none;">Contato</a>
+                <a href="./pagePerguntas-Frequentes/index.html" style="color: white; font-size: 0.8rem; text-decoration: none;">Perguntas Frequentes</a>
+            </div>
+            <p style="font-size: 0.7rem; color: rgba(255,255,255,0.5);">
+                As imagens são meramente ilustrativas. Os resultados podem variar de acordo com cada pessoa.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Contador regressivo
+        function updateCountdown() {
+            const now = new Date();
+            const end = new Date();
+            end.setHours(23, 59, 59, 999);
+
+            const diff = end - now;
+
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').textContent =
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+            const countdownOffer = document.getElementById('countdown-offer');
+            if (countdownOffer) {
+                const spans = countdownOffer.querySelectorAll('span');
+                spans[0].textContent = hours.toString().padStart(2, '0');
+                spans[1].textContent = minutes.toString().padStart(2, '0');
+                spans[2].textContent = seconds.toString().padStart(2, '0');
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Animação ao rolar a página
+        document.addEventListener('DOMContentLoaded', function () {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('section').forEach(section => {
+                section.style.opacity = 0;
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'all 0.6s ease-out';
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+
+</html>

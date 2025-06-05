@@ -1,0 +1,102 @@
+:root {
+    --azul-turquesa: #40E0D0;
+    --dourado-fosco: #D4AF37;
+    --azul-escuro: #0A2E38;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.cta-button {
+    animation: pulse 2s infinite;
+    background: linear-gradient(to right, var(--dourado-fosco), #c9a227);
+    color: white;
+    border: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.header-bar {
+    background-color: var(--azul-escuro);
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, var(--azul-escuro) 0%, var(--azul-turquesa) 100%);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.benefit-card {
+    border: 2px solid var(--dourado-fosco);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border-top: 5px solid var(--dourado-fosco);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.price-box {
+    border: 3px solid var(--dourado-fosco);
+    border-radius: 10px;
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.price-box::before {
+    content: "OFERTA LIMITADA";
+    position: absolute;
+    top: 10px;
+    right: -30px;
+    background: var(--dourado-fosco);
+    color: white;
+    padding: 5px 30px;
+    transform: rotate(45deg);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.guarantee-badge {
+    background: var(--azul-turquesa);
+    color: var(--azul-escuro);
+    font-weight: bold;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 5px 15px;
+}

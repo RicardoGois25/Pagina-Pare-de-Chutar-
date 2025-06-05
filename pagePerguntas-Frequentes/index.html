@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perguntas Frequentes - Meu eBook Resetei</title>
+    <style>
+        :root {
+            --azul-turquesa: #40E0D0;
+            --dourado-fosco: #D4AF37;
+            --azul-escuro: #0A2E38;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        .faq-container {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-top: 30px;
+        }
+        
+        h1 {
+            color: var(--azul-escuro);
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--azul-turquesa);
+            padding-bottom: 10px;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            background-color: rgba(64, 224, 208, 0.1);
+            padding: 15px 20px;
+            font-weight: 600;
+            color: var(--azul-escuro);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-question:hover {
+            background-color: rgba(64, 224, 208, 0.2);
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--dourado-fosco);
+        }
+        
+        .faq-question.active::after {
+            content: '-';
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-answer.show {
+            padding: 20px;
+            max-height: 500px;
+        }
+        
+        .faq-category {
+            margin-top: 40px;
+            color: var(--dourado-fosco);
+            font-weight: 700;
+            font-size: 1.2rem;
+            border-left: 4px solid var(--dourado-fosco);
+            padding-left: 10px;
+        }
+        
+        .voltar {
+            display: inline-block;
+            margin-top: 30px;
+            color: var(--azul-turquesa);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .voltar:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .faq-container {
+                padding: 15px;
+            }
+            
+            .faq-question {
+                padding: 12px 15px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="faq-container">
+        <h1>Perguntas Frequentes</h1>
+        
+        <h2 class="faq-category">Sobre o eBook</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">O que vou aprender com este eBook?</div>
+            <div class="faq-answer">
+                <p>Nosso eBook "Pare de Chutar!" ensina os fundamentos da avaliação de pedras preciosas, incluindo:</p>
+                <ul>
+                    <li>Técnicas para identificar pedras naturais, sintéticas e imitações</li>
+                    <li>Os 4 fatores que determinam o valor de uma gema</li>
+                    <li>Testes caseiros para verificar autenticidade</li>
+                    <li>Terminologia essencial da gemologia</li>
+                    <li>Como avaliar preços de mercado</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Preciso ter conhecimento prévio em gemologia?</div>
+            <div class="faq-answer">
+                <p>Não! O eBook foi desenvolvido para iniciantes e não requer nenhum conhecimento prévio. Explicamos todos os conceitos de forma clara e prática.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">O eBook substitui uma avaliação profissional?</div>
+            <div class="faq-answer">
+                <p>Não. Nosso material fornece conhecimento básico para que você não seja enganado, mas não substitui a avaliação de um gemólogo certificado para laudos oficiais ou transações de alto valor.</p>
+            </div>
+        </div>
+        
+        <h2 class="faq-category">Compra e Acesso</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">Como recebo o eBook após a compra?</div>
+            <div class="faq-answer">
+                <p>Imediatamente após a confirmação do pagamento pela Kiwify, você receberá:</p>
+                <ol>
+                    <li>Um e-mail com o link para download do eBook (formato PDF)</li>
+                    <li>Acesso aos bônus complementares</li>
+                    <li>Instruções para acessar seu material a qualquer momento</li>
+                </ol>
+                <p><strong>Verifique sua caixa de spam caso não encontre o e-mail.</strong></p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Quais formas de pagamento são aceitas?</div>
+            <div class="faq-answer">
+                <p>Aceitamos todas as principais formas de pagamento através da plataforma Kiwify:</p>
+                <ul>
+                    <li>Cartões de crédito (todas as bandeiras)</li>
+                    <li>Pix</li>
+                    <li>Boleto bancário</li>
+                    <li>PayPal</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Posso comprar se moro fora do Brasil?</div>
+            <div class="faq-answer">
+                <p>Sim! O eBook é digital e pode ser adquirido de qualquer país. O pagamento será convertido automaticamente para sua moeda local pela Kiwify.</p>
+            </div>
+        </div>
+        
+        <h2 class="faq-category">Garantia e Suporte</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">Como funciona a garantia de 7 dias?</div>
+            <div class="faq-answer">
+                <p>Oferecemos uma garantia incondicional de 7 dias através da Kiwify. Se por qualquer motivo você não estiver satisfeito:</p>
+                <ol>
+                    <li>Acesse seu painel na Kiwify</li>
+                    <li>Solicite o reembolso diretamente na plataforma</li>
+                    <li>Receba 100% do seu dinheiro de volta sem questionamentos</li>
+                </ol>
+                <p>Após este período, não serão aceitas solicitações de reembolso.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Como posso entrar em contato em caso de dúvidas?</div>
+            <div class="faq-answer">
+                <p>Nosso suporte é realizado exclusivamente por e-mail:</p>
+                <p><strong>contato@productsglobal.shop</strong></p>
+                <p>Respondemos em até 48 horas úteis. Para agilizar seu atendimento, inclua no assunto:</p>
+                <ul>
+                    <li>"Dúvida sobre o eBook" - para questões sobre o conteúdo</li>
+                    <li>"Problema com acesso" - para dificuldades técnicas</li>
+                    <li>"Solicitação de reembolso" - para pedidos de devolução</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Posso compartilhar o eBook com amigos?</div>
+            <div class="faq-answer">
+                <p>Não. O eBook é licenciado individualmente e seu compartilhamento constitui violação dos direitos autorais. Cada usuário deve adquirir sua própria cópia.</p>
+                <p>Detectamos automaticamente compartilhamento não autorizado e podemos cancelar o acesso sem reembolso em casos de violação.</p>
+            </div>
+        </div>
+        
+        <a href="../index.html" class="voltar">← Voltar para a página principal</a>
+    </div>
+
+    <script>
+        // Função para mostrar/esconder respostas
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isActive = question.classList.contains('active');
+                
+                // Fecha todas as outras respostas
+                document.querySelectorAll('.faq-question').forEach(q => {
+                    if (q !== question) {
+                        q.classList.remove('active');
+                        q.nextElementSibling.classList.remove('show');
+                    }
+                });
+                
+                // Alterna a resposta clicada
+                question.classList.toggle('active');
+                answer.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>

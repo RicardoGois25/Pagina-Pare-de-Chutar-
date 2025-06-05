@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Meu eBook Resetei</title>
+    <style>
+        :root {
+            --azul-turquesa: #40E0D0;
+            --dourado-fosco: #D4AF37;
+            --azul-escuro: #0A2E38;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        .contact-container {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-top: 30px;
+            border-top: 5px solid var(--dourado-fosco);
+        }
+        
+        h1 {
+            color: var(--azul-escuro);
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--azul-turquesa);
+            padding-bottom: 10px;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: rgba(64, 224, 208, 0.05);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-method:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .contact-icon {
+            font-size: 2rem;
+            color: var(--dourado-fosco);
+            margin-right: 20px;
+            min-width: 50px;
+            text-align: center;
+        }
+        
+        .contact-info h3 {
+            color: var(--azul-escuro);
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+        
+        .contact-info p {
+            margin: 0;
+            color: #666;
+        }
+        
+        .email-link {
+            color: var(--azul-turquesa);
+            font-weight: bold;
+            text-decoration: none;
+            word-break: break-all;
+        }
+        
+        .email-link:hover {
+            text-decoration: underline;
+            color: var(--azul-escuro);
+        }
+        
+        .response-time {
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        
+        .voltar {
+            display: inline-block;
+            margin-top: 30px;
+            color: var(--azul-turquesa);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .voltar:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .contact-method {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .contact-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="contact-container">
+        <h1>Fale Conosco</h1>
+        
+        <div class="contact-method">
+            <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-info">
+                <h3>E-mail de Contato</h3>
+                <p>
+                    <a href="mailto:contato@meuebookresetei.com" class="email-link">contato@productsglobal.shop</a>
+                </p>
+                <p class="response-time">Respondemos em até 48 horas úteis</p>
+            </div>
+        </div>
+        
+        <div class="contact-method" style="background: rgba(212, 175, 55, 0.05);">
+            <div class="contact-icon">
+                <i class="fas fa-info-circle"></i>
+            </div>
+            <div class="contact-info">
+                <h3>Informações Importantes</h3>
+                <p>Para agilizar seu atendimento, inclua no assunto:</p>
+                <p><strong>"Dúvida sobre o eBook"</strong> ou <strong>"Suporte Técnico"</strong></p>
+            </div>
+        </div>
+        
+        <div class="contact-method" style="background: rgba(10, 46, 56, 0.05);">
+            <div class="contact-icon">
+                <i class="fas fa-exclamation-triangle"></i>
+            </div>
+            <div class="contact-info">
+                <h3>Reembolsos</h3>
+                <p>Para solicitações de reembolso, utilize diretamente o painel da Kiwify ou envie e-mail com:</p>
+                <p><strong>"Solicitação de Reembolso"</strong> no assunto</p>
+            </div>
+        </div>
+        
+        <a href="../index.html" class="voltar">← Voltar para a página principal</a>
+    </div>
+</body>
+</html>
